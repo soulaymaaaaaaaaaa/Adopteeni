@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" />
+  <style>
+    body {
+      background-image: url("../../assets/adopter.png");
+      background-repeat: no-repeat;
+    }
+
+    .navbar-custom {
+      background-color: transparent;
+    }
+
+    .navbar-custom .navbar-brand,
+    .navbar-custom .navbar-text {
+    }
+    .collapse ul.navbar-nav > li > a {
+      color: black;
+      font-size: 25px;
+      font-weight: 500;
+    }
+
+    .nav-item::after {
+      content: "";
+      display: block;
+      width: 0px;
+      height: 2px;
+      background: #baabda;
+      transition: 0.4s;
+    }
+
+    .nav-item:hover::after {
+      width: 100%;
+    }
+
+    .nav-link {
+      padding: 25px 5px;
+      transition: 0.2s;
+    }
+    .logo {
+      width: 350px;
+    }
+    .panier {
+      width: 30px;
+      margin: 0 30px;
+      margin-left: 450px;
+    }
+
+    .btn-success {
+      background-color: #d6e5fa;
+      color: black;
+      border-radius: 12px;
+      border: #d6e5fa;
+      float: right;
+      box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+        0 17px 50px 0 rgba(0, 0, 0, 0.19);
+      font-size: 12px;
+      width: 150px;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    .btn-success:hover {
+      background-color: #baabda;
+      color: white;
+      box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+        0 17px 50px 0 rgba(0, 0, 0, 0.19);
+      font-size: 12px;
+      width: 150px;
+      font-size: 15px;
+      font-weight: bold;
+    }
+    .btn-success:focus {
+      background-color: #baabda;
+      color: white;
+      box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+        0 17px 50px 0 rgba(0, 0, 0, 0.19);
+      font-size: 12px;
+      width: 150px;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    .btn-primary {
+      background-color: #d77fa1;
+      color: black;
+      border-radius: 12px;
+      border: #d6e5fa;
+      float: right;
+      box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+        0 17px 50px 0 rgba(0, 0, 0, 0.19);
+      font-size: 12px;
+      width: 150px;
+      font-size: 15px;
+      font-weight: bold;
+      display: grid;
+      justify-content: center;
+    }
+
+    .btn-primary:hover {
+      background-color: #d77fa1;
+      color: white;
+      box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+        0 17px 50px 0 rgba(0, 0, 0, 0.19);
+      font-size: 12px;
+      width: 150px;
+      font-size: 15px;
+      font-weight: bold;
+    }
+    .btn-primary:focus {
+      background-color: #d77fa1;
+      color: white;
+      box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+        0 17px 50px 0 rgba(0, 0, 0, 0.19);
+      font-size: 12px;
+      width: 150px;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    .card {
+      transition: 0.3s;
+      border: #d6e5fa;
+      background-color: transparent;
+    }
+
+    /* On mouse-over, add a deeper shadow */
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+    .card-img-top {
+      width: 200px;
+      height: 300px;
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="m-4">
+    <nav class="navbar navbar-expand-md navbar-custom">
+      <a routerLink="" class="navbar-brand"><img src="../../assets/Adopteeni.png" class="logo"/></a>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/adopter">Adopter</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="">Apropos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="">Contact</a>
+          </li>
+          <li>
+            <a routerLink="/consulter" class="navbar"><img src="../../assets/panier.png" class="panier"/></a>
+          </li>
+          <li>
+            <form class="form-inline my-2 my-lg-0">
+              <a  class="btn btn-success" routerLink="/connecter">Se Connecter</a>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div class="row">
+    <!--col1-->
+    <div class="col">
+      <div class="card" style="width: 15rem; margin: 0 50px">
+        <img class="card-img-top" src="../../assets/cat.jpg" alt="Card image cap" />
+        <div class="card-body align-items-center d-flex justify-content-center">
+          <a class="btn btn-primary" routerLink="/adopteeni">Adopteeni!</a>
+        </div>
+      </div>
+    </div>
+
+    <!--col2-->
+    <div class="col">
+      <div class="card" style="width: 15rem; margin: 0 50px">
+        <img class="card-img-top" src="../../assets/cat2.jpg" alt="Card image cap" />
+        <div class="card-body align-items-center d-flex justify-content-center">
+          <a  class="btn btn-primary" routerLink="/adopteeni">Adopteeni!</a>
+        </div>
+      </div>
+    </div>
+    <!--col3-->
+    <div class="col">
+      <div class="card" style="width: 15rem; margin: 0 50px">
+        <img class="card-img-top" src="../../assets/cat3.jpg" alt="Card image cap" />
+        <div class="card-body align-items-center d-flex justify-content-center">
+          <a class="btn btn-primary" routerLink="/adopteeni">Adopteeni!</a>
+        </div>
+      </div>
+    </div>
+
+    <!--col4-->
+    <div class="col">
+      <div class="card" style="width: 15rem; margin: 0 50px">
+        <img class="card-img-top" src="../../assets/dog.jpg" alt="Card image cap" />
+        <div class="card-body align-items-center d-flex justify-content-center">
+          <a class="btn btn-primary" routerLink="/adopteeni">Adopteeni!</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 15rem; margin: 0 50px">
+        <img class="card-img-top" src="../../assets/dog.jpg" alt="Card image cap" />
+        <div class="card-body align-items-center d-flex justify-content-center">
+          <a class="btn btn-primary" routerLink="/adopteeni">Adopteeni!</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

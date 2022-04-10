@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html style="font-size: 16px">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#76869c" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="C:\Users\MTI-SHOP\Desktop\Adopteeni\Adopteeni\css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" type="text/css" media="screen" />
+
+    <title>Adopteeni</title>
+    <style class="text\css">
+      body {
+        background-image: url("../../assets/consulter.png");
+        background-repeat: no-repeat;
+      }
+      .navbar-custom {
+        background-color: transparent;
+      }
+
+      .navbar-custom .navbar-brand,
+      .navbar-custom .navbar-text,
+      .collapse ul.navbar-nav > li > a {
+        color: black;
+        font-size: 25px;
+        font-weight: 500;
+      }
+
+      .nav-item::after {
+        content: "";
+        display: block;
+        width: 0px;
+        height: 2px;
+        background: #baabda;
+        transition: 0.4s;
+      }
+
+      .nav-item:hover::after {
+        width: 100%;
+      }
+
+      .nav-link {
+        padding: 25px 5px;
+        transition: 0.2s;
+      }
+
+      .btn-success {
+        background-color: #d6e5fa;
+        color: black;
+        border-radius: 12px;
+        border: #d6e5fa;
+        float: right;
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+          0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        font-size: 12px;
+        width: 150px;
+        font-size: 15px;
+        font-weight: bold;
+      }
+
+      .btn-success:hover {
+        background-color: #d77fa1;
+        color: white;
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+          0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        font-size: 12px;
+        width: 150px;
+        font-size: 15px;
+        font-weight: bold;
+      }
+
+      .btn-success:focus {
+        background-color: #d77fa1;
+        color: white;
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+          0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        font-size: 12px;
+        width: 150px;
+        font-size: 15px;
+        font-weight: bold;
+      }
+
+      .btn-primary {
+        background-color: #d77fa1;
+        color: black;
+        border-radius: 35px;
+        border: #d6e5fa;
+        float: right;
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+          0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        font-size: 12px;
+        width: 150px;
+        font-size: 15px;
+        font-weight: bold;
+        display: grid;
+        justify-content: center;
+      }
+
+      .btn-primary:hover {
+        background-color: #d77fa1;
+        color: white;
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+          0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        font-size: 12px;
+        width: 150px;
+        font-size: 15px;
+        font-weight: bold;
+      }
+
+      .btn-primary:focus {
+        background-color: #d6e5fa;
+        color: white;
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+          0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        font-size: 12px;
+        width: 150px;
+        font-size: 15px;
+        font-weight: bold;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+      }
+
+      .card-1 {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        background-color: #baabda;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 100px;
+        position: 20% center;
+      }
+
+      .card-2 {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        border-radius: 100px;
+        background-color: blueviolet;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .btn-secondary {
+        background-color: #d6e5fa;
+        color: black;
+        border-radius: 12px;
+        border: #d6e5fa;
+        float: right;
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+          0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        font-size: 12px;
+        width: 150px;
+        font-size: 15px;
+        font-weight: bold;
+      }
+      #con {
+        margin-top: 10%;
+      }
+      .btn-secondary:hover {
+        background-color: #baabda;
+        color: white;
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+          0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        font-size: 12px;
+        width: 150px;
+        font-size: 15px;
+        font-weight: bold;
+      }
+      .btn-secondary:focus {
+        background-color: #baabda;
+        color: white;
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+          0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        font-size: 12px;
+        width: 150px;
+        font-size: 15px;
+        font-weight: bold;
+      }
+
+      .card-side {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        border-radius: 20px;
+        background-color: #d77fa1;
+        height: 450px;
+        width: 300px;
+        position: 60% 60%;
+      }
+
+      /* On mouse-over, add a deeper shadow */
+      .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      .body1 {
+        background-image: url("../../assets/consulter.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      #yo2-1side {
+        border-radius: 0px;
+        background-color: #d6e5fa;
+        border-color: #d6e5fa;
+        padding: 0px;
+        width: 275px;
+        height: 310px;
+        margin: 80px 30px;
+        margin-top: 50px;
+        margin-left: 90px;
+        left: 243.5px;
+        border-width: 17.7px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+      }
+      .logo {
+        width: 300px;
+      }
+
+      #yo2-1 {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        border-radius: 100px;
+        border-color: #d6e5fa;
+        border-width: 15.7px;
+        background-color: #baabda;
+        width: 450px;
+        height: 510px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        left: 0px;
+        padding: 5px;
+        margin: -30px 30px;
+        margin-top: -70px;
+        margin-bottom: 100px;
+      }
+      .panier {
+        width: 200px;
+      }
+
+      #img-side {
+        background-repeat: no-repeat;
+        size: contain;
+        width: 50%;
+        height: 285px;
+        width: 250px;
+        padding: 0px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        margin-right: 0px;
+        margin-left: -4.5px;
+      }
+
+      .u-section-1 .u-container-layout-5 {
+        padding: 30px;
+        width: 325px;
+        height: 375px;
+        background-position: 33% center;
+      }
+    </style>
+
+    <script>
+      const form = document.querySelector("form");
+      const data = new FormData(form);
+    </script>
+  </head>
+  <!--var x = document.getElementById("myForm");
+      var txt = "";
+      var i;
+      for (i = 0; i < x.length; i++) {
+        console.info(x.elements[i].value);}
+
+        OR(angular)
+        
+        var app = angular.module('TryApp', [], function() {})
+
+app.controller('AppController', function($scope) {
+  $scope.user = {};
+  $scope.submit = function() {
+    //here $scope.user will have all the 3 properties
+    alert(JSON.stringify($scope.user));
+  }
+})
+exple:zid efhem bih bsh tekhdem l angular 
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+<div id="content" ng-app="TryApp" ng-controller="AppController">
+  <form ng-submit="submit()">
+    <input type="text" placeholder="first name" name='name' ng-model="user.Name" />
+    <br>
+    <input type="text" placeholder="email address" name="name" ng-model="user.email" />
+    <br>
+    <input type="text" placeholder="age" name="age" ng-model="user.age" />
+    <br>
+    <input type="submit" value="Save" />
+    <p>{{user | json }}</p>
+  </form>
+</div>
+
+      -->
+
+  <body>
+    <nav class="navbar navbar-expand-md navbar-custom">
+      <!--brand-->
+      <a class="navbar-brand" routerLink=""
+        ><img
+          src="../../assets/Adopteeni.png"
+          class="img-fluid"
+          alt="logo"
+          style="width: 300px; height: auto"
+      /></a>
+      <!--toggler/collapside button-->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="collapsibleNavbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!--navbar links-->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/adopter">Adopter</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="">A propos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="">Contact</a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav ml-auto">
+          <li>
+            <a class="navbar float-right" routerLink="/consulter"
+              ><img
+                src="../../assets/panier.png"
+                style="width: 30px; margin: 0 30px"
+            /></a>
+          </li>
+          <li>
+            <form class="form-inline my-2 my-lg-0">
+              <a class="btn btn-success" routerLink="/connecter">Se Connecter</a>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="container-fluid">
+          <div class="card" id="yo2-1side">
+            <img
+              class="align-center"
+              src="../../assets/lapin.jpg"
+              id="img-side"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div
+          class="card mx-auto"
+          id="yo2-1"
+          style="
+            width: 30rem;
+            font-family: 'American', 'Typewriter', serif;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            border-radius: 25px;
+            background-color: #baabda;
+            margin-left: -100px;
+            margin-right: -500px;
+            margin-top: -30px;
+            height: 500px;
+            border-color: #d77fa1;
+            border-width: 10px;
+            width: 500px;
+          "
+        >
+          <div class="card-body">
+            <div class="container-fluid">
+              <form method="post" action="">
+                <div
+                  class="row"
+                  style="
+                    margin-left: 0px;
+                    margin-right: 0px;
+                    margin-top: 17px;
+                    margin-bottom: 20px;
+                  "
+                >
+                  <div class="col-6">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="nom animal"
+                      required
+                      style="margin-left: 10px"
+                    />
+                  </div>
+                  <div class="col-6">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="nom du proprietaire"
+                      style="margin-right: 10px"
+                    />
+                  </div>
+                </div>
+                <label
+                  class="form-label"
+                  style="
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    margin-top: 10px;
+                  "
+                >
+                  Description</label
+                >
+                <textarea
+                  class="form-control"
+                  size="25"
+                  style="margin-left: 10px; margin-right: 10px"
+                >
+                </textarea>
+                <div class="row">
+                  <div class="col-4">
+                    <select
+                      class="form-control"
+                      style="margin-left: 10px; margin-top: 10px"
+                    >
+                      <option>chat</option>
+                      <option>chien</option>
+                      <option>lapin</option>
+                      <option>herisson</option>
+                      <option>oiseaux</option>
+                      <option>serpent</option>
+                      <option>grenouille</option>
+                      <option>poisson</option>
+                      <option>hamster</option>
+                      <option>tortue</option>
+                      <option>perroquet</option>
+                      <option>canard</option>
+                    </select>
+                  </div>
+
+                  <div class="col-4">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="race"
+                      style="margin-left: 10px; margin-top: 10px"
+                    />
+                  </div>
+
+                  <div class="col-4">
+                    <select
+                      class="form-control"
+                      style="margin-top: 9px; margin-right: 10px"
+                    >
+                      <option>femelle</option>
+                      <option>male</option>
+                    </select>
+                  </div>
+                </div>
+
+                <label
+                  class="form-label"
+                  style="
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    margin-top: 10px;
+                  "
+                >
+                  Adresse
+                </label>
+                <textarea
+                  class="form-control"
+                  size="25"
+                  style="margin-left: 10px; margin-right: 10px"
+                >
+                </textarea>
+
+                <input
+                  type="tel"
+                  class="form-control"
+                  placeholder="telephone"
+                  style="
+                    margin-left: 10px;
+                    margin-top: 10px;
+                    margin-right: 10px;
+                  "
+                />
+
+                <h6 style="margin-left: 40px; margin-top: 10px">
+                  vacciné(e)?
+                </h6>
+
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="inlineRadioOptions"
+                    id="inlineRadio1"
+                    value="option1"
+                    style="margin-top: 10px; margin-right: 10px"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="inlineRadio1"
+                    style="margin-top: 10px"
+                    >oui</label
+                  >
+                </div>
+
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    checked
+                    type="radio"
+                    name="inlineRadioOptions"
+                    id="inlineRadio2"
+                    value="option2"
+                    style="margin-top: 10px; margin-right: 10px"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="inlineRadio2"
+                    style="margin-top: 10px"
+                    >non</label
+                  >
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
